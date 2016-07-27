@@ -1,0 +1,69 @@
+doctype html
+html
+  style.
+    body {font-family: "Lato", sans-serif;}
+    .box{
+    background-color: white;
+    text-decoration-color: black;
+    font-size: 20px;
+    height:30px;
+    width: 150px;
+    padding: 5px;
+    text-align:center;
+    }
+    .label{
+    background-color: #ddd;
+    text-decoration-color: Blue;
+    font-size: 20px;
+    height:30px;
+    width:100px;
+    text-align:center;
+    padding:5px;
+    }
+    ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    }
+    ul.tab li {float: left;}
+    ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    }
+    ul.tab li a:hover {
+    background-color: #ddd;
+    }
+    ul.tab li a:focus, .active {
+    background-color: #ccc;
+    }
+    .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    }
+  body
+    p Login Page
+    ul.tab
+      li
+        a.tablinks(href='/') Home
+    form(action='/users/login', method='POST')
+      .label
+        label Username
+      .box
+        input#username(type='text', name='username', value='')
+        br
+      .label
+        label Password
+      .box
+        input#password(type='password', name='password' value='')
+        br
+      input(type='submit', value='Login')
